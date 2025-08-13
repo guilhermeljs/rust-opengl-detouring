@@ -2,20 +2,19 @@
 
 ## Overview
 
-This is a **lab project** that demonstrates how to perform **function detouring** on **OpenGL 1.0** in Windows using **Rust `unsafe`** code and **inline assembly** in an almost bytecode-like style.  
+This is a **lab project** that demonstrates how to perform **function detouring** on **OpenGL 1.0** in Windows using **Rust `unsafe`** code.
 The goal is to hook low-level OpenGL calls and **inject an [`egui`](https://github.com/emilk/egui) UI** into an existing rendering pipeline.
 
 This is a **highly low-level**, **unsafe**, and **Windows-specific** example intended for educational and research purposes only.  
-It is **not maintained**, **not production-ready**, and should be treated solely as a reference for building other projects.
+It is **unfinished**, **not maintained**, **not production-ready**, and should be treated solely as a reference for building other projects.
 
 ---
 
 ## Complexity and Expertise Required
 
-This project involves **advanced low-level programming** concepts that require deep understanding in:
+This project involves **low-level programming** concepts that require understanding in:
 
 - Operating system internals and Windows API.
-- CPU architecture and instruction sets (x86/x86_64) for inline assembly.
 - Manual function hooking and trampolining techniques.
 - Unsafe Rust programming with direct memory manipulation.
 - OpenGL context management and graphics pipeline intricacies.
@@ -25,7 +24,7 @@ The code is **not polished or clean**; it is intentionally written at a very low
 
 The amount of subtle pitfalls is enormous. A single misplaced byte in the trampoline or a mismanaged OpenGL context can cause **immediate crashes** or undefined behavior.  
 
-This project is **not trivial**—it demands **background in systems programming** and some experience with **unsafe code and debugging injected code inside other processes**.
+This project is **not trivial**—it demands **background in systems programming** and some experience with **unsafe code**.
 
 ---
 
@@ -33,7 +32,6 @@ This project is **not trivial**—it demands **background in systems programming
 
 - Manual detouring of OpenGL 1.0 functions (e.g. `wglSwapBuffers`) without relying on external hooking libraries.
 - Direct memory patching using Rust's `unsafe` capabilities.
-- Inline assembly for precise instruction patching.
 - `egui` integration rendered on top of the hooked OpenGL context.
 
 ---
@@ -56,7 +54,7 @@ This project is **not trivial**—it demands **background in systems programming
 
 - **Unmaintained**: This is not an actively supported project.
 - **Experimental**: Intended only for testing, learning, and reference.
-- **Unsafe**: Makes heavy use of raw pointers, inline assembly, and direct memory writes.
+- **Unsafe**: Makes heavy use of raw pointers and direct memory writes.
 
 
 ---
@@ -64,7 +62,7 @@ This project is **not trivial**—it demands **background in systems programming
 
 ## Demonstration
 
-- **Application logs with DebugViewer**
+- **Application logs with DebugViewer (alternative to alloc console)**
 
 ![Viewing debug logs through debug viewer](assets/view-logs.png)
 
