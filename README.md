@@ -65,9 +65,11 @@ This project is **not trivial**—it demands **background in systems programming
 ## Demonstration
 
 - **Application logs with DebugViewer**
+
 ![Viewing debug logs through debug viewer](assets/view-logs.png)
 
 - **Injected in-game menu example**
+
 ![Injected example menu (with working input capture)](assets/injected-menu.png)
 
 
